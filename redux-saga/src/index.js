@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import { configureStore } from "@reduxjs/toolkit";
 import catSaga from "./catSaga";
-import { catReducer } from "./catState";
+import { catReducer } from "./catSlice";
 
 const saga = createSagaMiddleware();
 const store = configureStore({

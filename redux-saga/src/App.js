@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { catActions } from "./catState";
+import { catActions } from "./catSlice";
 
 function App() {
   const cats = useSelector((state) => state.cat.cats);
@@ -8,6 +8,7 @@ function App() {
 
   const handleCats = () => {
     dispatch(catActions.getCatsFetch());
+    
   };
 
   useEffect(() => {
